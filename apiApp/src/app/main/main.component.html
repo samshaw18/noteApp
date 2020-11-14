@@ -1,0 +1,33 @@
+<div class="mb-3"></div>
+<div class="container ">
+  <h1 class="text-center">Notes App</h1>
+  <div class="row">
+    <div class="col-2 bg-info p-3" style="height: 91vh;" >
+      <div class="form-group">
+        <form [formGroup]="form" (submit)="add()">
+          <input type="text" class="form-control" formControlName="title" ngModel="test" />
+          <textarea class="form-control" formControlName="content" ngModel="bla bla bla"   rows="3"></textarea>
+
+
+          <input type="submit" value="Send"  class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngFor="let n of notes">
+        <app-card [note]="n"></app-card>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+<!-- <app-card [user]="clickedUser"></app-card> -->
